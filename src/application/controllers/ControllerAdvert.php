@@ -26,6 +26,12 @@ class ControllerAdvert  extends Controller
         $todo = $_POST['todo'];
 
         if ($todo == "new"){
+            if ($advert['latitudes'] == ""){
+                $advert['latitudes'] = null;
+            }
+            if ($advert['longitudes'] == ""){
+                $advert['longitudes'] = null;
+            }
             $filename = $model->uploadImage($_FILES['photo']);
             $model->addAdvert($advert, $filename);
         }
