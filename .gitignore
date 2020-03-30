@@ -1,3 +1,4 @@
 # Created by .ignore support plugin (hsz.mobi)
 .idea/
 src/application/config/database_config.php
+src/vendors/
