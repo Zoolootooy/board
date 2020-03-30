@@ -79,7 +79,7 @@
         <div id="map"></div>
         <input type="hidden" id="lon" value="<?= $lon;?>">
         <input type="hidden" id="lat" value="<?= $lat;?>">
-        <script src="../../js/map.js">
+        <script src="../../js/map.show.js">
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAk10RdU1wJJ7UZnIZj8XBuVQopBvicRPE&callback=initMap"
                 async defer></script>

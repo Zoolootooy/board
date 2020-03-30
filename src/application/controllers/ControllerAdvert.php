@@ -31,6 +31,12 @@ class ControllerAdvert  extends Controller
         }
         else {
             if ($todo == "update"){
+                if ($advert['latitudes'] == ""){
+                    $advert['latitudes'] = null;
+                }
+                if ($advert['longitudes'] == ""){
+                    $advert['longitudes'] = null;
+                }
 
                 if ($_FILES['photo']['name'] != NULL){
                     $filename = $model->uploadImage($_FILES['photo']);

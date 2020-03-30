@@ -130,8 +130,8 @@
 
 
 
-
-
+                    <input id="lat" type="hidden" name="latitudes" value="<?= $lat;?>">
+                    <input id="lon" type="hidden" name="longitudes" value="<?= $lon;?>">
                     <input type="hidden" name="todo" value="<?= $todo;?>">
                     <input type="hidden" name="create_date" value="<?= $advert['create_date'] ?>">
                     <input type="hidden" name="a_id" value="<?= $a_id; ?>">
@@ -141,10 +141,12 @@
                     <div class="col-6 offset-3">
                         <div class="text-center" id="map"></div>
                     </div>
+                    <div class="col-3 text-left">
+                        <input onclick="deleteMarkers();" type=button value="Delete Marker">
+                    </div>
                 </div>
 
-                <input type="hidden" id="lon" value="<?= $lon;?>">
-                <input type="hidden" id="lat" value="<?= $lat;?>">
+
                 <div class="row">
                     <div class="col-2 offset-8">
                         <div class="text-rigth">
@@ -155,15 +157,6 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
     <script src="../../js/map.js">
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAk10RdU1wJJ7UZnIZj8XBuVQopBvicRPE&callback=initMap"

@@ -67,12 +67,15 @@ class ModelAdvert extends Model
                 country_id = ?,
                 email = ?, 
                 end_date = ?, 
-                create_date = ?, 
+                create_date = ?,
+                latitudes = ?,
+                longitudes = ?,
                 photo = ? 
                 WHERE id=?",
             [
                 $advert['title'], $advert['description'], $advert['phone'], $advert['country_id'], $advert['email'],
-                $advert['end_date'], $advert['create_date'],  $filename, $advert['a_id']
+                $advert['end_date'], $advert['create_date'], $advert['latitudes'], $advert['longitudes'],  $filename,
+                $advert['a_id']
             ]
         );
 
@@ -89,11 +92,12 @@ class ModelAdvert extends Model
         $create_date = date("Y-m-d");
         $executeQuery = $this->conn->query(
             "
-            INSERT INTO advert (title, description, phone, country_id, email, end_date, create_date, photo)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+            INSERT INTO advert (title, description, phone, country_id, email, end_date, create_date,
+             latitudes, longitudes, photo)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
             [
                 $advert['title'], $advert['description'], $advert['phone'], $advert['country_id'], $advert['email'],
-                $advert['end_date'], $create_date,  $filename
+                $advert['end_date'], $create_date, $advert['latitudes'], $advert['longitudes'],  $filename
             ]
         );
 
