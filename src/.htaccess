@@ -1,7 +1,3 @@
-AuthType Basic
-AuthName "Some Name"
-AuthUserFile /usr/home/testing_ground/.htpasswd
-require valid-user 
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
